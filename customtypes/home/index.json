@@ -1,0 +1,73 @@
+{
+  "id": "home",
+  "label": "Home",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "featured_works_title": {
+              "type": "SharedSlice"
+            },
+            "marquee_slice": {
+              "type": "SharedSlice"
+            },
+            "works_showcase_left": {
+              "type": "SharedSlice"
+            },
+            "works_showcase_right": {
+              "type": "SharedSlice"
+            },
+            "contact_showcase": {
+              "type": "SharedSlice"
+            },
+            "news_and_insights": {
+              "type": "SharedSlice"
+            },
+            "featured_works_show_case": {
+              "type": "SharedSlice"
+            },
+            "home_brief": {
+              "type": "SharedSlice"
+            },
+            "home_hero": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      }
+    }
+  }
+}

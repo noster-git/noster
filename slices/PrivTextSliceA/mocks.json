@@ -1,0 +1,31 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Excepteur incididunt ad ea duis dolore fugiat nulla ullamco ad in aute in nulla amet sint. Commodo nulla excepteur do ullamco ad voluptate tempor nostrud irure sunt id id. Officia ad nisi cillum voluptate enim irure quis reprehenderit incididunt."
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco officia aute veniam aliqua dolor duis velit."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

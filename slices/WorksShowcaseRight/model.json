@@ -1,0 +1,121 @@
+{
+  "id": "works_showcase_right",
+  "type": "SharedSlice",
+  "name": "WorksShowcaseRight",
+  "description": "WorksShowcaseRight",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "company_name_a": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Company Name A",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "description_a": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description A",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "image_a": {
+          "type": "Image",
+          "config": {
+            "label": "Image A",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "cta_link_a": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link A",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "company_name_b": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Company Name B",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "description_b": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description B",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "image_b": {
+          "type": "Image",
+          "config": {
+            "label": "Image B",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "cta_link_b": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link B",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "company_name_c": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Company Name C",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "description_c": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description C",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "image_c": {
+          "type": "Image",
+          "config": {
+            "label": "Image C",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "cta_link_c": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link C",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

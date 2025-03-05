@@ -1,0 +1,42 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint dolore labore consequat esse labore cillum laborum duis consequat quis aute. Exercitation officia labore labore officia quis voluptate nostrud ad sunt esse elit occaecat minim. Reprehenderit tempor Lorem nulla nulla nisi id aliquip veniam quis consequat mollit."
+						}
+					}
+				]
+			},
+			"subtext": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eu anim eu dolore excepteur ipsum ipsum amet eiusmod Lorem ea pariatur."
+						}
+					}
+				]
+			},
+			"bullet_points": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Adipisicing reprehenderit proident est aliqua eu esse in ut anim dolore."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

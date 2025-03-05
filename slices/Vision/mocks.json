@@ -1,0 +1,102 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"client": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Elit aute ipsum ad exercitation nostrud sunt proident excepteur voluptate velit ut eu. Ex non est est est. Minim id est aliquip officia minim ea voluptate incididunt ea officia et."
+						}
+					}
+				]
+			},
+			"sector": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ut ut ut laboris ea dolor sit Lorem magna id incididunt nulla laboris sint aliquip."
+						}
+					}
+				]
+			},
+			"status": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ipsum sunt nisi minim esse laboris eiusmod eiusmod exercitation ullamco nostrud voluptate nostrud cupidatat."
+						}
+					}
+				]
+			},
+			"location": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Irure ipsum ea non sunt in non incididunt. Pariatur qui voluptate ad eiusmod laboris consectetur fugiat non."
+						}
+					}
+				]
+			},
+			"scope": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ex excepteur qui ea labore dolor labore amet elit irure deserunt elit laborum ea magna. Voluptate eiusmod cupidatat aliqua nisi ea laboris eiusmod cupidatat voluptate do exercitation. Ipsum cupidatat id magna mollit eiusmod mollit in mollit consequat nostrud."
+						}
+					}
+				]
+			},
+			"scale": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Incididunt velit deserunt amet adipisicing nostrud sunt commodo sint velit irure ipsum amet elit nulla."
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Non quis veniam Lorem nisi est id deserunt exercitation enim. Laborum ex cupidatat non exercitation cillum et fugiat qui ut officia esse. Tempor officia proident velit ea sunt ut enim."
+						}
+					}
+				]
+			},
+			"text_left": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Enim labore laboris esse ex exercitation veniam deserunt laborum incididunt reprehenderit reprehenderit ad."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]
