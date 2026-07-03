@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
 import { revalidateTag } from "next/cache";
 
-export async function POST() {
-  revalidateTag("prismic");
-
-  return NextResponse.json({ revalidated: true, now: Date.now() });
+export async function POST(req) {
+  try {
+    await req.json().catch(() => {});
+    revalidateTag("prismic");
+    return NextResponse.json({ revalidated: true, now: Date.now() });
+  } catch (err) {
+    return NextResponse.json({ revalidated: false, error: err.message }, { status: 500 });
+  }
 }
