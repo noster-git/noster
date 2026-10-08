@@ -190,7 +190,7 @@ export default function Nav(){
                     })
                 }
             </div>
-            <a href="tel:+919656922212" className="nav-right">
+            <a href="tel:+918848434303" className="nav-right">
                 <div className="nav-right-wrapper">
                     <div className="nav-right-text">
                         <p className="p-r exclusion">
@@ -225,7 +225,7 @@ export default function Nav(){
                             )
                         })
                     }
-                    <a className="hb-inner-item black-txt p-r" href='tel: +91-7025576677'>
+                    <a className="hb-inner-item black-txt p-r" href='tel: +91-8848434303'>
                         Book an appointment
                     </a>
                 </div>

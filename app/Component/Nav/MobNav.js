@@ -45,7 +45,7 @@ export default function MobNav({uid}){
             }>
             <div style={{display:'flex', alignItems:'center', justifyContent:'center', borderRadius:'20em', width:'', background:'rgba(30, 30, 30, 1)', padding:'14px'}}>
                 <div className="">
-                    <a href='tel:+91 9656922212' className="" style={{fontSize:'16px'}}>
+                    <a href='tel:+91 8848434303' className="" style={{fontSize:'16px'}}>
                         Talk to us
                     </a>
                 </div>

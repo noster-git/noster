@@ -22,15 +22,15 @@ export default function Footer({style}){
         {
             location: 'Kochi',
             description: 'Plot no. 16, Ground floor, Geo infopark, infopark campus, Kakkanad Kochi 682042',
-            contact: '+91 9656922212', // SHAFEEQ NUMBER
-            contactLink: '+919656922212',
+            contact: '+91 7025576677', // SHAFEEQ NUMBER
+            contactLink: '+917025576677',
             href: 'https://www.google.com/maps/search/Noster+Associates+Pvt+Ltd+Emaar+Tower+at+TV+Centre,+Poyyachira,+Kakkanad,+CSEZ+PO+PIN+682037/@10.0047621,76.3380979,16z/data=!3m1!4b1?entry=ttu'
         },
         {
             location: 'Hyderabad',
             description: 'Plot B7, Road Number 92, Journalist Colony, Film Nagar Jubilee Hills Hyderabad, Telengana 500033',
-            contact: '+91 9544551888',
-            contactLink: '+919544551888',
+            contact: '+91 7025576677',
+            contactLink: '+917025576677',
             href: 'https://www.google.com/maps/search/NOSTER+CONCEPTS+PRIVATE+LIMITED+Plot+No-219,+D+No-8-2-293%2F82,+Road+No-78,+Jubilee+Hills,+Hyderabad,+Hyderabad,+Hyderabad,+Telangana,+India,+500033/@17.4163599,78.4008591,18z/data=!3m1!4b1?entry=ttu'
         },
     ]
