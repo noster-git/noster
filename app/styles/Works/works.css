@@ -256,6 +256,96 @@
 .mob-img {
     display: none;
 }
+/* Consecutive images sit two per row on desktop, alternating 60/40 then 40/60;
+   an odd last one spans the full row */
+.works-img-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 2rem;
+    container-type: inline-size; /* lets row heights below use the grid's width (cqw) */
+}
+.works-img-grid > .worksImg,
+.works-img-grid > .vertical-image {
+    flex: 1 1 calc(40% - 1rem);
+    padding: 0;
+}
+.works-img-grid > :nth-child(4n+1),
+.works-img-grid > :nth-child(4n) {
+    flex-basis: calc(60% - 1rem);
+}
+/* A lone image (e.g. the top one before the brief) fills exactly one screen height on desktop */
+@media (min-width: 681px) {
+    .works-img-grid > .worksImg:only-child {
+        aspect-ratio: auto;
+        height: 100vh;
+    }
+}
+.works-img-grid > .worksImg {
+    height: auto;
+    aspect-ratio: 3 / 2;
+}
+/* Every row has the same fixed height, worked out from the grid's width (cqw):
+   a 60% landscape at 3:2. Photos cover their box instead of sizing it, so nothing
+   about a photo or a hover can change a row's height.
+   Pairs are 1st+2nd, 3rd+4th, …: an odd child pairs with the one after it. */
+@media (min-width: 681px) {
+    .works-img-grid > .worksImg,
+    .works-img-grid > .vertical-image {
+        aspect-ratio: auto;
+        height: calc((60cqw - 1rem) * 2 / 3);
+        position: relative;
+    }
+    .works-img-grid > .worksImg > .parallax,
+    .works-img-grid > .vertical-image > .parallax {
+        position: absolute;
+        inset: 0;
+    }
+    /* when a portrait's row grows on hover, its partner stays centred in the row */
+    .works-img-grid {
+        align-items: center;
+    }
+    /* portraits always take the narrow slot and their landscape partner the wide one:
+       a wider portrait would not show any more of the photo */
+    .works-img-grid > .vertical-image:nth-child(n) {
+        flex-basis: calc(40% - 1rem);
+    }
+    .works-img-grid > .vertical-image:nth-child(odd) + .worksImg,
+    .works-img-grid > .worksImg:nth-child(odd):has(+ .vertical-image) {
+        flex-basis: calc(60% - 1rem);
+    }
+    /* an odd last image: a landscape spans the full row at 3:2, but never taller than
+       the screen (like the lone image at the top); a portrait stays narrow */
+    .works-img-grid > .worksImg:last-child:nth-child(odd):not(:only-child) {
+        height: min(calc(100cqw * 2 / 3), 100vh);
+    }
+    .works-img-grid > .vertical-image:last-child:nth-child(odd) {
+        flex-grow: 0;
+    }
+}
+/* With a mouse, a hovered photo is shown as it is:
+   - a landscape widens to 80% and its partner narrows to 20%; the row height stays;
+   - a portrait keeps its width and its row grows to the photo's full 2:3 height,
+     capped at 90% of the screen, pushing the rows below down instead of covering them. */
+@media (min-width: 681px) and (hover: hover) {
+    .works-img-grid > .worksImg {
+        transition: flex-basis 0.4s cubic-bezier(0.76, 0.00, 0.24, 1);
+    }
+    .works-img-grid > .worksImg:nth-child(n):hover {
+        flex-basis: calc(80% - 1rem);
+    }
+    .works-img-grid > .worksImg:nth-child(odd):hover + *,
+    .works-img-grid > :nth-child(odd):has(+ .worksImg:hover) {
+        flex-basis: calc(20% - 1rem);
+    }
+    .works-img-grid > .vertical-image {
+        transition: flex-basis 0.4s cubic-bezier(0.76, 0.00, 0.24, 1),
+                    height 0.4s cubic-bezier(0.76, 0.00, 0.24, 1);
+    }
+    .works-img-grid > .vertical-image:hover {
+        height: min(calc((40cqw - 1rem) * 3 / 2), 90vh);
+    }
+}
 /* Works Image End */
 
 /* Behind the scene */
@@ -738,6 +828,16 @@
     .worksImg  {
         padding: 0 1.7rem;
     }
+    .works-img-grid {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1.7rem;
+    }
+    .works-img-grid > .worksImg,
+    .works-img-grid > .vertical-image {
+        flex: none;
+        width: 100%;
+    }
     /* Behind the Scenes */
     .b-scene {
         font-size: 3rem;
@@ -948,3 +1048,67 @@
         display: none;
     }
 }
+
+/* All works ("Show all projects" button on home + /works page) */
+.all-works-cta {
+    padding: 2em 0 8em 0;
+}
+body.darkMode .all-works-cta .b-scene-cta {
+    border-color: #FFF;
+}
+body.darkMode .all-works-cta .b-scene-cta::after {
+    background: #FFF;
+}
+body.darkMode .all-works-cta .b-scene-cta-text {
+    color: #FFF;
+}
+body.darkMode .all-works-cta .b-scene-cta:hover .b-scene-cta-text {
+    color: #000;
+}
+.all-works-title {
+    padding-top: 12rem;
+}
+/* All works end */
+
+/* Works grid (app/Component/WorksGrid) */
+.works-grid-card {
+    width: 95%;
+    margin: 2em 0;
+}
+/* Touch tablets have no hover, so instead of the expanding rows show a 3-column
+   grid with every heading and description visible. Phones keep the stacked list. */
+@media (min-width: 681px) and (hover: none) {
+    .works-grid > .works-showcase-left,
+    .works-grid > .works-showcase-right {
+        display: none;
+    }
+    .works-grid > .works-grid-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        gap: 3em 1rem;
+        padding: 4em var(--side-padding) 6em;
+    }
+    .works-grid-card {
+        width: auto;
+        margin: 0;
+    }
+    .works-grid-card .fw-showcase-item-text-wrapper {
+        position: relative;
+        bottom: auto;
+        height: auto;
+        overflow: visible;
+        margin-top: 0.75em;
+    }
+    .works-grid-card .fw-showcase-item-text-inner-wrapper {
+        flex-direction: column;
+        gap: 0.4em;
+        transform: none;
+    }
+    .works-grid-card .fw-showcase-item-c-name,
+    .works-grid-card .fw-showcase-item-desc,
+    .works-grid-card .fw-showcase-item-desc > p {
+        width: 100%;
+    }
+}
+/* Works grid end */

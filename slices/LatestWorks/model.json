@@ -1,0 +1,62 @@
+{
+  "id": "latest_works",
+  "type": "SharedSlice",
+  "name": "LatestWorks",
+  "description": "Project showcase. Add new projects at the bottom of the list: the last one added shows first. Home shows the latest 15; /works shows all.",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "View all projects"
+          }
+        }
+      },
+      "items": {
+        "company_name": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Company Name",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "Project Page",
+            "placeholder": "",
+            "select": "document",
+            "customtypes": ["works_child"]
+          }
+        }
+      }
+    }
+  ]
+}

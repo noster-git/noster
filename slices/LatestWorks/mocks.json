@@ -1,0 +1,14 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "View all projects",
+        "type": "Text"
+      }
+    },
+    "items": []
+  }
+]

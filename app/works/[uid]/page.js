@@ -10,7 +10,27 @@ export default async function Page({ params }) {
     .getByUID("works_child", params.uid)
     .catch(() => notFound());
 
-  return <SliceZone slices={page.data.slices} components={components} />;
+  return groupImageSlices(page.data.slices).map((group, i) =>
+    group.isImage ? (
+      <div key={i} className="works-img-grid">
+        <SliceZone slices={group.slices} components={components} />
+      </div>
+    ) : (
+      <SliceZone key={i} slices={group.slices} components={components} />
+    )
+  );
+}
+
+// Groups consecutive work_child_image slices so they can sit side by side.
+function groupImageSlices(slices) {
+  const groups = [];
+  for (const slice of slices) {
+    const isImage = slice.slice_type === "work_child_image";
+    const last = groups[groups.length - 1];
+    if (last && last.isImage === isImage) last.slices.push(slice);
+    else groups.push({ isImage, slices: [slice] });
+  }
+  return groups;
 }
 
 export async function generateMetadata({ params }) {

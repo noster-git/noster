@@ -37,6 +37,9 @@
             },
             "home_hero": {
               "type": "SharedSlice"
+            },
+            "latest_works": {
+              "type": "SharedSlice"
             }
           }
         }
