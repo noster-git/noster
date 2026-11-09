@@ -264,6 +264,9 @@
     gap: 2rem;
     padding: 0 2rem;
     container-type: inline-size; /* lets row heights below use the grid's width (cqw) */
+    /* Hover motion for the images (see "With a mouse" below). Tune here. */
+    --img-hover-ease: cubic-bezier(0.33, 1, 0.68, 1); /* ease-out cubic: responsive start, smooth landing */
+    --img-hover-duration: 0.75s;
 }
 .works-img-grid > .worksImg,
 .works-img-grid > .vertical-image {
@@ -328,8 +331,11 @@
    - a portrait keeps its width and its row grows to the photo's full 2:3 height,
      capped at 90% of the screen, pushing the rows below down instead of covering them. */
 @media (min-width: 681px) and (hover: hover) {
-    .works-img-grid > .worksImg {
-        transition: flex-basis 0.4s cubic-bezier(0.76, 0.00, 0.24, 1);
+    .works-img-grid > .worksImg,
+    .works-img-grid > .vertical-image {
+        transition-property: flex-basis, height;
+        transition-duration: var(--img-hover-duration);
+        transition-timing-function: var(--img-hover-ease);
     }
     .works-img-grid > .worksImg:nth-child(n):hover {
         flex-basis: calc(80% - 1rem);
@@ -337,10 +343,6 @@
     .works-img-grid > .worksImg:nth-child(odd):hover + *,
     .works-img-grid > :nth-child(odd):has(+ .worksImg:hover) {
         flex-basis: calc(20% - 1rem);
-    }
-    .works-img-grid > .vertical-image {
-        transition: flex-basis 0.4s cubic-bezier(0.76, 0.00, 0.24, 1),
-                    height 0.4s cubic-bezier(0.76, 0.00, 0.24, 1);
     }
     .works-img-grid > .vertical-image:hover {
         height: min(calc((40cqw - 1rem) * 3 / 2), 90vh);
