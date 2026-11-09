@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { scrollToTarget } from "@/app/Component/SmoothScroll/SmoothScroll"
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -102,7 +103,7 @@ export default function NavComponentA( )  {
             data.map((item, i) => {
                 return(
                 <div onClick={() => {
-                   lenis.scrollTo(`${item.link}`)
+                   scrollToTarget(item.link)
                 }} className="works-nav-item snow" key={i} style={{borderRight: i != 2 ? '1px #000 solid':'', position:'relative', cursor:'pointer'}}>
                     <div className="elipse-container" style={{width:'10%', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', position:'relative', left:'-5%'}}>
                         <div className="elipse" style={{height:'0.5em', width:'0.5em', background:'#000', borderRadius:'50%', position:'relative', opacity:'0'}} />

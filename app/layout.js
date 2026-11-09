@@ -5,7 +5,7 @@
 
 'use client'
 import { useEffect } from 'react'
-import Lenis from '@studio-freight/lenis'
+import SmoothScroll from './Component/SmoothScroll/SmoothScroll'
 import './globals.css'
 import './styles/Home/home.css' 
 import './styles/Works/works.css'
@@ -64,6 +64,7 @@ export default function RootLayout({ children }) {
       {/* </Head> */}
         <body className={inter.className}>
           <ParallaxProvider>
+            <SmoothScroll />
             <Nav />
             <MobNav />
               {children}

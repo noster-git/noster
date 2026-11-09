@@ -4,6 +4,7 @@ import { PrismicRichText } from "@prismicio/react";
 
 import React, { useRef, useState, useEffect } from 'react'
 import VideoModal from "../video-modal";
+import { pauseScroll, resumeScroll } from "@/app/Component/SmoothScroll/SmoothScroll";
 
 const Hero = ({ slice }) => {
 
@@ -19,6 +20,7 @@ const Hero = ({ slice }) => {
         setModal(true)
         vidRef.current.pause()
         document.body.classList.add("no-scroll")
+        pauseScroll()
    }
 
    const handleCloseModal = () => {
@@ -26,6 +28,7 @@ const Hero = ({ slice }) => {
         vidRef.current.play()
         modalVidRef.current.play()
         document.body.classList.remove("no-scroll")
+        resumeScroll()
    }
 
 //    useEffect(() => {
